@@ -1,0 +1,14 @@
+CUDA_VISIBLE_DEVICES=0 python train.py \
+    --image_folder "/data/lww/data/050.페르소나 기반의 가상 인물 몽타주 데이터/01.데이터/preprocessed_for_sketch/train/images" \
+    --text_folder "/data/lww/data/050.페르소나 기반의 가상 인물 몽타주 데이터/01.데이터/preprocessed_for_sketch/train/labels" \
+    --save_path results/sketch \
+    --vae_config configs/vae_config_sketch.yaml
+
+CUDA_VISIBLE_DEVICES=2 python train.py \
+    --image_folder "/data/lww/data/050.페르소나 기반의 가상 인물 몽타주 데이터/01.데이터/preprocessed_for_image/train/images" \
+    --text_folder "/data/lww/data/050.페르소나 기반의 가상 인물 몽타주 데이터/01.데이터/preprocessed_for_image/train/labels" \
+    --save_path results/image \
+    --vae_config configs/vae_config_image.yaml
+
+---
+

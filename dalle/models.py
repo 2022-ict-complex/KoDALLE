@@ -93,7 +93,7 @@ class DALLE_Klue_Roberta(nn.Module):
             image_fmap_size=image_fmap_size,
             sparse_attn=sparse_attn,
             stable=stable,
-            sandwich_norm=sandwich_norm,
+            # sandwich_norm=sandwich_norm,
             shift_tokens=shift_tokens,
             rotary_emb=rotary_emb,
         )

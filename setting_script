@@ -1,0 +1,13 @@
+conda create -n ict_complex -c nvidia python=3.8 cudatoolkit=11.3
+conda activate ict_complex
+conda install -c nvidia cudnn=8.2
+
+conda update -n base -c defaults conda
+pip install --upgrade pip
+
+pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio===0.11.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
+pip install -r requirements.txt
+
+pip install insightface onnxruntime-gpu jupyter opencv-python imageio imageio-ffmpeg protobuf==3.20.1 omegaconf==2.0.0 streamlit more-itertools wandb
+
+pip install pudb==2019.2 pytorch-lightning==1.0.8 omegaconf==2.0.0 einops==0.3.0 transformers==4.3.1  protobuf==3.20.1 adamp dalle_pytorch
